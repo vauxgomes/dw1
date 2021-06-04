@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="3" />
+
+        <title>Receipt</title>
+
+        <link rel="stylesheet" href="styles/receipt.css" />
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <div class="phone">
+            <div class="header">
+                <img src="./imgs/profile.jpeg" class="profile-img profile-sm" />
+
+                <span>Receipt Example</span>
+
+                <div class="menu">
+                    <i class="material-icons">chevron_left</i>
+                    <a href="./index.html">Voltar</a>
+                </div>
+            </div>
+
+            <!-- RECEIPT -->
+            <div class="receipt">
+                <!-- TICKET -->
+                <div class="ticket shadow">
+                    <div class="main">
+                        <img class="thumb" src="./imgs/times-square.jpg" />
+                        <div class="info">
+                            <span class="title">Times Square</span>
+                            <span class="price">19.00</span>
+                            <span class="payment">MasterCard</span>
+                        </div>
+                    </div>
+
+                    <div class="peel-off">
+                        <div class="circle top-circle"></div>
+                        <span>RECEIPT</span>
+                        <div class="circle bottom-circle"></div>
+                    </div>
+                </div>
+
+                <!-- CHECK -->
+                <div class="check">
+                    <span class="title">Payment details</span>
+
+                    <div class="items">
+                        <div class="item">
+                            <span class="desc">Survey B12 Kit</span>
+                            <span class="price">17</span>
+                        </div>
+
+                        <div class="item">
+                            <span class="desc">VAT (5%)</span>
+                            <span class="price">0.85</span>
+                        </div>
+
+                        <div class="item">
+                            <span class="desc">Sub Total</span>
+                            <span class="price">19.85</span>
+                        </div>
+                    </div>
+
+                    <div class="total item">
+                        <span class="desc">Total</span>
+                        <span class="price">19.85</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="confirmation">
+                <span>Confirm order and pay?</span>
+                <p>
+                    Confirming order would prompt the deduction of
+                    <b>$19.85</b> from your main account.
+                </p>
+
+                <div>
+                    <button class="btn btn-primary btn-wide">Confirm</button>
+                    <button class="btn btn-secondary btn-narrow">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

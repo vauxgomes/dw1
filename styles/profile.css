@@ -1,0 +1,18 @@
+:root {
+    --profile-size: 120px;
+    --profile-size-sm: 45px;
+}
+
+.profile-img {
+    object-fit: cover;
+
+    width: var(--profile-size);
+    height: var(--profile-size);
+
+    border-radius: 50%;
+}
+
+.profile-sm {
+    width: var(--profile-size-sm);
+    height: var(--profile-size-sm);
+}

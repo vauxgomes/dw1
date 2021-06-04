@@ -1,0 +1,26 @@
+/* BUTTONS */
+.btn {
+    font-weight: 300;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    min-width: 160px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: --var(--primary);
+}
+
+.btn-wide {
+    min-width: 65%;
+}
+
+.btn-narrow {
+    min-width: 30%;
+}

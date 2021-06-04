@@ -1,0 +1,230 @@
+/* IMPORTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+@import url("profile.css");
+@import url("buttons.css");
+
+/* VARIABLES */
+
+:root {
+    --circle-size: 12px;
+    --primary: #095849;
+    --secondary: #d8f3dc;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROW TAGS */
+
+body {
+    background-color: #ddd;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* PHONE */
+
+.phone {
+    width: 400px;
+    /* height: 700px; */
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+
+    margin: 0 auto;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    padding: 20px 18px;
+}
+
+/* HEAD */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header span {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* RECEIPT */
+
+.receipt {
+    background: #eee;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-bottom: 50px;
+}
+
+/* TICKET */
+
+.ticket {
+    margin: 15px 17px 40px 17px;
+    overflow: hidden;
+
+    background-color: var(--primary);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;  
+
+    box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.87); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.ticket .main {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    margin: 12px 10px 12px 15px;
+}
+
+.ticket .info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ticket .thumb {
+    object-fit: cover;
+
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+
+    border-radius: 7px;
+}
+
+.ticket .title {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.ticket .price,
+.ticket .payment {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 80%;
+}
+
+.price::before {
+    content: "$";
+}
+
+.ticket .peel-off {
+    flex-grow: 0;
+    border-left: 2px dashed #ffffffcc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticket .peel-off span {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    transform: rotate(-90deg);
+
+    opacity: 80%;
+}
+
+/* TICKET CIRCLES */
+
+.circle {
+    display: block;
+    overflow: hidden;
+
+    height: var(--circle-size);
+    width: calc(var(--circle-size) * 2);
+
+    background-color: #ccc;
+}
+
+.top-circle {
+    border-bottom-left-radius: calc(var(--circle-size) * 2);
+    border-bottom-right-radius: calc(var(--circle-size) * 2);
+
+    margin-left: calc(var(--circle-size) * -1);
+}
+
+.bottom-circle {
+    /* background-color: #eee; */
+
+    border-top-left-radius: calc(var(--circle-size) * 2);
+    border-top-right-radius: calc(var(--circle-size) * 2);
+
+    margin-left: calc(var(--circle-size) * -1);
+}
+
+/* CHECK */
+.check .title {
+    font-size: 18px;
+    font-weight: 700;
+
+    padding-left: 25px;
+}
+
+.check .items {
+    padding: 25px;
+    margin: 25px 0px;
+}
+
+.check .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    letter-spacing: -1px;
+}
+
+.check .price {
+    text-align: right;
+    font-weight: 600;
+}
+
+.check .total {
+    padding: 25px;
+    background-color: #ccc;
+}
+
+/* CONFIRMATION */
+
+.confirmation span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.confirmation p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.confirmation div {
+    display: flex;
+    justify-content: space-between;
+}
