@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+			placeholder="0"
+		/>
+		<!-- <meta http-equiv="refresh" content="3" /> -->
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="styles/vagas.css" />
+
+		<title>Cálculo de Vagas</title>
+	</head>
+	<body>
+		<div class="container">
+			<form class="form" id="form">
+				<div class="header">
+					<h2>Cálculo de Vagas</h2>
+
+					<!-- <a href="#">
+						<span>Mostrar dicas</span>
+						<i class="material-icons-outlined">visibility</i>
+					</a> -->
+				</div>
+
+				<hr />
+
+				<div class="form-group">
+					<label for="tfc">Tempo de Funcionamento do Curso (TFC)</label>
+
+					<span class="tip">
+						Total de semestres letivos do curso, contados a partir do seu
+						semestre inicial
+					</span>
+
+					<input
+						class="forvaa"
+						type="number"
+						min="0"
+						id="tfc"
+						name="tfc"
+						placeholder="TFC em Semestres"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="tic">Tempo de Integralização Curricular (TIC)</label>
+					<span class="tip">
+						Total de semestres letivos previstos para a integralização do curso
+					</span>
+					<input
+						class="forvaa"
+						type="number"
+						min="0"
+						id="tic"
+						name="tic"
+						placeholder="TIC em Semestres"
+						required
+						value="5"
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="va">Vagas Autorizadas (VA)</label>
+					<span class="tip">
+						Quantidade de vagas iniciais, definidas no PPC
+					</span>
+					<input
+						class="forvaa"
+						type="number"
+						min="0"
+						id="va"
+						name="va"
+						placeholder="VA"
+						required
+						value="30"
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="vaa">Vagas Autorizadas Acumuladas (VAA)</label>
+					<span class="tip"
+						>Quantidade de vagas autorizadas multiplicada pelo tempo de
+						funcionamento do curso, limitado pelo tempo de integralização
+						curricular
+					</span>
+					<input min="0" id="vaa" name="vaa" readonly placeholder="VAA" />
+				</div>
+
+				<div class="form-group">
+					<label for="voa">Vagas Ocupadas Acumuladas (VOA)</label>
+                    <span class="tip">
+						Quantidade de matrículas que possuem vínculo institucional no período letivo que antecede a entrada dos transferidos
+                        ou diplomados
+					</span>
+					<input
+						type="number"
+						min="0"
+						id="voa"
+						name="voa"
+						placeholder="VOA"
+						required
+					/>
+				</div>
+
+				<button type="submit">Calcular</button>
+			</form>
+
+			<p>
+				Criei este pequeno formulário para execução do cálculo de vagas para
+				oferta do <b>IFCE campus Jaguaribe</b>.
+			</p>
+		</div>
+	</body>
+
+	<script>
+		function updateVaa() {
+			var tfc = document.querySelector("#tfc");
+			var tic = document.querySelector("#tic");
+			var va = document.querySelector("#va");
+			var vaa = document.querySelector("#vaa");
+
+			vaa.value = va.value * Math.min(tfc.value, tic.value);
+		}
+
+		document.querySelector("#tfc").value =
+			(new Date().getFullYear() - 2013) * 2 -
+			(new Date().getMonth() < 6 ? 1 : 0);
+
+        var inputs = document.querySelectorAll("#tfc, #tic, #va");
+        [...inputs].forEach(input => {
+            console.log(input);
+            
+            input.addEventListener('change', () => {
+                updateVaa();
+            });
+        });
+
+		document.querySelector("#form").addEventListener("submit", (event) => {
+			var vaa = document.querySelector("#vaa");
+			var voa = document.querySelector("#voa");
+
+			alert(`Total de vagas: ${voa.value - vaa.value}`);
+			event.preventDefault();
+		});
+
+        updateVaa();
+	</script>
+</html>

@@ -1,0 +1,130 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("reset.css");
+
+:root {
+	--gray: #e2e2e2;
+	--dark-gray: #a6a6a6;
+	--darkest-gray: #575757;
+	--white: #ffffff;
+	--primary: #1762f2;
+}
+
+body {
+	background: var(--gray);
+	font-family: "Open Sans", sans-serif;
+}
+
+.container {
+	max-width: 460px;
+
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 15px 20px;
+
+	background: var(--white);
+	border-radius: 7px;
+
+	color: var(--darkest-gray);
+}
+
+/* HEADER */
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form .header a {
+	display: flex;
+
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--darkest-gray);
+}
+
+.form .header a span {
+	margin-right: 5px;
+}
+
+.form .header h2 {
+	font-weight: 600;
+	color: #000;
+}
+
+.form hr {
+	margin: 15px 0;
+	border: 0;
+	border-top: 1px solid #aaa;
+}
+
+/* Body */
+
+.form .form-group {
+    display: block;
+    margin: 20px 0;
+}
+
+.form input:not(input[type="radio"]) {
+    display: block;
+    width: 100%;
+	margin: 5px 0px;
+	padding: 8px;
+
+	border: 1px solid var(--gray);
+	border-radius: 5px;
+}
+
+.form input[type="radio"] {
+    margin: 10px;
+}
+
+.form input:read-only {
+    background: var(--gray);
+}
+
+.form input:focus {
+	outline: none !important;
+	border: 1px solid var(--primary);
+}
+
+.form button {
+    cursor: pointer;
+
+	display: block;
+    width: 100%;
+
+    color: var(--white);
+	background: var(--primary);
+
+	border: none;
+	border-radius: 7px;
+
+	padding: 10px;
+    margin: 20px 0px
+}
+
+.container p {
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* TOOLTIP */
+
+
+.tip {
+    display: block;
+	font-size: 11px;
+	color: var(--dark-gray);
+    margin: 5px 0px 10px 0px;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
