@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta http-equiv="refresh" content="3" /> -->
+
+		<link rel="stylesheet" href="./styles/sidebar.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+			rel="stylesheet"
+		/>
+
+		<title>Sidebar</title>
+	</head>
+	<body>
+		<div class="sidebar active">
+			<div class="menu">
+				<a href="#" class="logo" id="logo">
+					<span class="icon material-icons">menu</span>
+					<span class="desc">Company</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">home</span>
+					<span class="desc">Dashboard</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">event</span>
+					<span class="desc">Calendar</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">person</span>
+					<span class="desc">Clients</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">auto_graph</span>
+					<span class="desc">Stocks</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">text_snippet</span>
+					<span class="desc">Reports</span>
+				</a>
+
+				<a href="#" class="item">
+					<span class="icon material-icons">settings</span>
+					<span class="desc">Settings</span>
+				</a>
+			</div>
+
+			<div class="profile">
+				<img src="./img/profile.jpeg" class="profile-img profile-xs" />
+                <div class="info">
+                    <span>Vaux Gomes</span>
+                    <span class="mute">Professor</span>
+                </div>
+			</div>
+		</div>
+
+		<script>
+			document.querySelector("#logo").addEventListener("click", () => {
+				document.querySelector(".sidebar").classList.toggle("active");
+			});
+		</script>
+	</body>
+</html>

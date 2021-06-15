@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("./profile.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--green: #b9d9d8;
+	--light-green: #e2f2f5;
+	--dark-green: #00a9a7;
+	--white: #fafcfc;
+	--gray: #96aab8;
+    --light-gray: #e4e2e2;
+	--text: #08172f;
+}
+
+body {
+	background-color: #aec8ca;
+	font-family: "Open Sans", sans-serif;
+	color: var(--text);
+}
+
+.sidebar {
+	color: var(--text);
+    background: var(--white);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+
+	position: fixed;
+	top: 10px;
+	left: 10px;
+
+	width: 85px;
+
+	border-radius: 18px;
+
+	transition: width 0.5s ease-in-out;
+}
+
+.sidebar.active {
+	width: 250px;
+}
+
+.sidebar .menu {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+
+    padding: 15px;
+	margin-bottom: 50px;
+}
+
+.sidebar .desc {
+	width: 0;    
+    margin-left: 15px;
+
+    color: var(--text);
+    font-weight: 600;
+
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.sidebar.active .desc {
+	width: 100%;
+}
+
+.sidebar .logo {
+	padding: 15px;
+	margin-bottom: 80px;
+
+	display: flex;
+	justify-content: flex-start;
+    vertical-align: middle;
+	text-decoration: none;
+}
+
+.sidebar .icon {
+	color: var(--gray);
+}
+
+.sidebar .item {
+	padding: 15px;
+	display: flex;
+	border-radius: 18px;
+	text-decoration: none;
+    vertical-align: middle;
+}
+
+.sidebar.active .item {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.sidebar .item:hover {
+	background: var(--light-green);
+}
+
+.sidebar .item:hover .icon {
+	color: var(--dark-green);
+}
+
+.sidebar .profile {
+    padding: 25px 20px;
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sidebar.active .profile {
+	border-top: 1px solid var(--light-gray);
+}
+
+.sidebar .profile .info {
+	white-space: nowrap;
+	margin-left: 10px;
+
+	width: 0;	
+	overflow: hidden;
+	transition: width 0.5s ease-in-out;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar.active .profile .info {
+	width: 100%;
+}
+
+
+.sidebar .desc {
+	width: 0;    
+    margin-left: 15px;
+
+    color: var(--text);
+    font-weight: 600;
+
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.sidebar.active .desc {
+	width: 100%;
+}
+
+.sidebar .mute {
+    font-weight: 400;
+    color: var(--gray);
+}
+

@@ -1,6 +1,7 @@
 :root {
     --profile-size: 120px;
-    --profile-size-sm: 45px;
+    --profile-size-sm: 60px;
+    --profile-size-xs: 45px;
 }
 
 .profile-img {
@@ -15,4 +16,9 @@
 .profile-sm {
     width: var(--profile-size-sm);
     height: var(--profile-size-sm);
+}
+
+.profile-xs {
+    width: var(--profile-size-xs);
+    height: var(--profile-size-xs);
 }
