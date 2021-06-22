@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("./reset.css");
+
+:root {
+	--white: #fcfcfc;
+	--black: #0f0f0f;
+	--gray: #f7f7f7;
+	--green-grass: #9bc400;
+	--purple-mountain: #8076a3;
+}
+
+body {
+	color: var(--black);
+	font-family: "Open Sans", "sans-serif";
+	font-size: 16px;
+
+	background-color: var(--gray);
+}
+
+a {
+	color: var(--green-grass);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+
+.btn {
+	padding: 8px;
+	font-size: 18px !important;
+	border: none;
+	font-weight: bold;
+	color: var(--white);
+	background: var(--green-grass);
+}
+
+.rounded {
+	border-radius: 50%;
+}
+
+.topbar {
+    position: sticky;
+	background-color: var(--white);
+	padding: 15px 32px;
+}
+
+.topbar__logo {
+	font-size: 26px;
+	font-weight: 600;
+}
+
+main {
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+main header {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+main header h2 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+main header p {
+	margin-bottom: 10px;
+}
+
+.portifolio {
+	display: flex;
+	justify-content: space-around;
+	/* align-items: center; */
+	flex-wrap: wrap;
+}
+
+.portifolio__item {
+	width: 270px;
+	height: 270px;
+
+	border-radius: 10px;
+	margin-bottom: 20px;
+
+	overflow: hidden;
+
+	/* border: 1px solid black; */
+	position: relative;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.portifolio__item img {
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	z-index: -1;
+
+	-webkit-filter: grayscale(80%);
+	-moz-filter: grayscale(80%);
+	filter: grayscale(80%);
+
+	transition: all 0.3s ease-in-out;
+}
+
+.portifolio__item:hover img {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+.item__info {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+.item__options {
+	align-self: flex-end;
+}
+
+.item__title {
+	font-weight: 600;
+	font-size: 13px;
+
+	padding: 6px 8px;
+	border-radius: 20px;
+
+	background: var(--black);
+	color: var(--white);
+}
