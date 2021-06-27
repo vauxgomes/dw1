@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", "sans-serif";
+	/* font-size: 12px; */
+
+	font-size: 16px;
+}
+
+.layouts {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.mb-1 {
+	margin-bottom: 5px;
+}
+
+.mb-2 {
+	margin-bottom: 10px;
+}
+
+.fs-md {
+	font-size: 16px;
+}
+
+.bg-gray {
+	background: #e5e5e5;
+}
+
+.box {
+	width: 300px;
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Layouts */
+
+.layouts .banner,
+.layouts .menu,
+.layouts .main,
+.layouts .aside,
+.layouts .footer {
+	padding: 5px;
+}
+
+#smartphone .menu,
+#tablet .menu {
+	height: 30px;
+}
+
+#smartphone .main {
+	height: 90px;
+}
+
+#smartphone .aside {
+	height: 50px;
+}
+
+#smartphone .footer,
+#tablet .footer {
+	height: 30px;
+}
+
+#tablet .main {
+	width: 180px;
+	height: 145px;
+}
+
+#tablet .aside {
+	width: 75px;
+	/* height: 50px; */
+}
+
+#computer .banner {
+	height: 50px;
+}
+
+#computer .menu,
+#computer .aside {
+	width: 60px;
+}
+
+#computer .main {
+	width: 130px;
+	height: 129px;
+}
+
+/* ------ */
+
+.banner,
+.menu,
+.main,
+.aside,
+.footer {
+	padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*  Comuputer */
+@media screen and (min-width: 769px) {
+	.banner {
+		height: 150px;
+		margin-bottom: 10px;
+
+        display: block;
+	}
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.menu {
+        float: left;
+		width: 180px;
+        height: 400px;
+		margin-right: 10px;
+	}
+
+	.main {
+		width: 100%;
+		height: 400px;
+		margin-right: 10px;
+	}
+
+	.aside {
+		width: 180px;
+	}
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+	.banner {
+        display: none;
+	}
+
+    .content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.main {
+        flex-grow: 1;
+		height: 505px;
+		margin-right: 10px;
+	}
+
+	.aside {
+		width: 180px;
+	}
+}
+
+/*  Comuputer */
+@media screen and (max-width: 480px) {
+	
+	.menu {
+		width: 100%;
+		margin-right: 10px;
+	}
+
+    .content {
+        display: block;
+    }
+
+	.main {
+		width: 100%;
+		height: 380px;
+		margin-right: 10px;
+	}
+
+	.aside {
+		width: 100%;
+        height: 115px;
+	}
+}
