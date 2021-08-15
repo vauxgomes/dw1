@@ -60,8 +60,11 @@ img.icon {
 }
 
 .btn {
+    cursor: pointer;
+    width: 100%;
     padding: 1rem;
     border-radius: 6px;
+    border: 0;
 
     text-decoration: none;
     font-weight: bold;
