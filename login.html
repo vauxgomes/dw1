@@ -1,0 +1,108 @@
+<!-- https://dribbble.com/shots/15496797-Website-Log-in-Page/attachments/7272600?mode=media -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="refresh" content="5" />
+
+        <title>Login Page</title>
+
+        <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Log in</h1>
+            <p class="mute">
+                Bem vindo! Utilize os campos abaixo para fazer login ou criar a
+                sua conta.
+            </p>
+
+            <a href="#" class="btn shadow">
+                <img class="icon" src="./img/icons/google-g.svg" />
+                <span>Login com Google</span>
+            </a>
+
+            <a href="#" class="btn shadow">
+                <img class="icon" src="./img/icons/facebook-f.svg" />
+                <span>Login com Facebook</span>
+            </a>
+
+            <hr />
+
+            <form id="login-form">
+                <!-- Email -->
+                <div class="form-group bg-light">
+                    <!-- Icon -->
+                    <i class="icon fas fa-envelope"></i>
+
+                    <!-- Input -->
+                    <div>
+                        <label for="email">Email</label>
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="email@example.com"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group bg-light">
+                    <!-- Icon -->
+                    <i class="icon fas fa-lock"></i>
+
+                    <!-- Input -->
+                    <div>
+                        <label for="password">Senha</label>
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="***********"
+                            required
+                        />
+                    </div>
+
+                    <i
+                        class="pointer icon fas fa-eye"
+                        data-target="password"
+                        onclick="showPassword()"
+                    ></i>
+                </div>
+
+                <!-- Remember -->
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="form-check">
+                        <input id="remember" type="checkbox" />
+                        <span class="checkmark"></span>
+                        <label for="remember">Lembrar</label>
+                    </div>
+
+                    <a href="#">Esqueci minha senha!</a>
+                </div>
+
+                <a href="#" class="btn btn-primary">Entrar</a>
+            </form>
+
+            <p class="small text-center">
+                Não tem uma conta ainda?
+                <a href="#">Esqueci minha senha!</a>
+            </p>
+        </div>
+    </body>
+</html>

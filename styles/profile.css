@@ -1,7 +1,8 @@
 :root {
     --profile-size: 120px;
-    --profile-size-sm: 60px;
-    --profile-size-xs: 45px;
+    --profile-size-md: 60px;
+    --profile-size-sm: 45px;
+    --profile-size-xs: 30px;
 }
 
 .profile-img {
