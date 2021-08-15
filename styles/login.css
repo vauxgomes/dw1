@@ -95,7 +95,7 @@ img.icon {
 }
 
 .form-group div {
-    flex-grow: 0.9;
+    flex-grow: 1;
 }
 
 .form-group input {
