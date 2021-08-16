@@ -1,0 +1,79 @@
+<!-- https://dribbble.com/shots/15725843-Minimal-Calendar-App -->
+<!-- https://dribbble.com/shots/7065869-Minimal-Calendar-Concept -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="refresh" content="3" />
+
+        <title>Home Page</title>
+
+        <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="dashboard">
+            <nav class="sidebar">
+                <i class="logo fas fa-crow"></i>
+
+                <div class="menu">
+                    <a href="#">
+                        <i class="far fa-envelope"></i>
+                    </a>
+
+                    <a href="#" class="active">
+                        <i class="far fa-calendar-alt"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="far fa-file-alt"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </div>
+
+                <i class="fas fa-chevron-right"></i>
+            </nav>
+
+            <main>
+                <div class="searchbar">
+                    <div class="search-field">
+                        <label>
+                            <i class="fas fa-search"></i>
+                            <input
+                                id="search"
+                                name="search"
+                                placeholder="Procure um ticket"
+                            />
+                        </label>
+                    </div>
+
+                    <div class="notifications text-center">
+                        <div>
+                            <i class="far fa-bell"></i>
+                            <div class="red-dot"></div>
+                        </div>
+
+                        5 notificações
+                    </div>
+
+                    <div class="profile text-right">Profile</div>
+                </div>
+
+                <div class="content">
+                    <div class="tickets">Tickets</div>
+                    <div class="calendar">Calendar</div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

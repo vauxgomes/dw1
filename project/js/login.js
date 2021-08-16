@@ -4,10 +4,10 @@ function showPassword(source) {
 
 	if (input.type == "text") {
 		input.type = "password";
-		input.placeholder = "***********";
+		// input.placeholder = "***********";
 	} else if (input.type == "password") {
 		input.type = "text";
-		input.placeholder = "senhaexemplo";
+		// input.placeholder = "senhaexemplo";
 	}
 
 	source.classList.toggle("fa-eye");
@@ -26,5 +26,7 @@ window.document
 			data[key] = value;
 		}
 
-        window.location = 'index.html';
+		// Todo
+
+        window.location = 'home.html';
 	});

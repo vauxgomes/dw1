@@ -1,0 +1,119 @@
+@import url("./config.css");
+@import url("./global.css");
+@import url("./reset.css");
+@import url("./custom.css");
+
+.logo {
+    font-size: 25px;
+    color: #4364f7;
+}
+
+.dashboard {
+    height: 100vh;
+    background: white;
+
+    display: flex;
+}
+
+.dashboard main {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .content {
+    flex-grow: 1;
+
+    display: flex;
+}
+
+.searchbar {
+    padding: 1.5rem 1rem;
+    height: 70px;
+
+    background-color: var(--light-gray);
+    /* border-bottom: 2px solid var(--line-gray); */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--medium-gray);
+}
+
+.search-field i {
+    color: var(--medium-gray);
+    margin-right: 0.5rem;
+}
+
+.search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--dark-gray);
+}
+
+.search-field input::placeholder {
+    color: var(--medium-gray);
+}
+
+.searchbar .search-field,
+.searchbar .notifications,
+.searchbar .profile {
+    flex-grow: 1;
+}
+
+.red-dot {
+    width: 10px;
+    height: 10px;
+    background: red;
+}
+
+.tickets {
+    max-width: 350px;
+    flex-grow: 1;
+
+    border-right: 2px solid var(--line-gray);
+}
+
+.calendar {
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 90px;
+
+    padding: 1.5rem 1rem;
+    /* border-right: 2px solid var(--line-gray); */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 2rem; */
+}
+
+.sidebar .menu a {
+    color: var(--medium-gray);
+    text-decoration: none;
+
+    padding: 1rem;
+    border-radius: 8px;
+
+    font-size: medium;
+}
+
+.sidebar .menu a.active {
+    color: black;
+}
+
+.sidebar .menu a:hover {
+    background-color: var(--light-gray);
+}

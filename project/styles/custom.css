@@ -1,20 +1,10 @@
-@import url("./commons.css");
-@import url("./reset.css");
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
-:root {
-    --light-gray: #f0eeee;
-    --black: #100814;
-    --gray: #b7b6a2;
-    --dark-gray: #5c5053;
-    --primary: #00a9a7;
-}
-
 body {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: "Open Sans", sans-serif;
-    background-color: var(--primary);
+    background-color: var(--bg-body);
+    height: auto;
 }
 
 a,
@@ -28,36 +18,7 @@ hr {
     border-top: 1px solid var(--light-gray);
 }
 
-img.icon {
-    width: 18px;
-    height: 18px;
-}
-
-.container {
-    max-width: 500px;
-
-    margin: 1.5rem auto;
-    padding: 3rem;
-
-    background-color: white;
-    border-radius: 6px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.mute {
-    color: var(--gray);
-}
-
-.bg-light {
-    background-color: var(--light-gray);
-}
-
-.icon {
-    color: var(--dark-gray);
-}
+/* Buttons */
 
 .btn {
     cursor: pointer;
@@ -79,6 +40,8 @@ img.icon {
     color: white !important;
     background-color: var(--primary);
 }
+
+/* Forms */
 
 .form-group {
     margin-bottom: 1rem;
