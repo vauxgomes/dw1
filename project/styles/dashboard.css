@@ -5,7 +5,7 @@
 
 .logo {
     font-size: 25px;
-    color: #4364f7;
+    /* color: var(--primary); */
 }
 
 .dashboard {
@@ -16,6 +16,7 @@
 }
 
 .dashboard main {
+    height: 100%;
     flex-grow: 1;
 
     display: flex;
@@ -24,27 +25,44 @@
 
 .dashboard .content {
     flex-grow: 1;
-
     display: flex;
+    overflow: auto;
+}
+
+.add-ticket {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 1.25rem;
+
+    background-color: var(--primary);
+
+    font-size: 18px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: white !important;
+
+    border: none;
+    border-top-left-radius: 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .searchbar {
     padding: 1.5rem 1rem;
-    height: 70px;
+    height: 8vh;
 
+    color: var(--medium-gray);
     background-color: var(--light-gray);
-    /* border-bottom: 2px solid var(--line-gray); */
+    border-bottom: 1px solid var(--line-gray);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    color: var(--medium-gray);
 }
 
 .search-field i {
     color: var(--medium-gray);
-    margin-right: 0.5rem;
 }
 
 .search-field input {
@@ -64,28 +82,11 @@
     flex-grow: 1;
 }
 
-.red-dot {
-    width: 10px;
-    height: 10px;
-    background: red;
-}
-
-.tickets {
-    max-width: 350px;
-    flex-grow: 1;
-
-    border-right: 2px solid var(--line-gray);
-}
-
-.calendar {
-    flex-grow: 1;
-}
-
 .sidebar {
-    width: 90px;
+    width: 8bh;
 
     padding: 1.5rem 1rem;
-    /* border-right: 2px solid var(--line-gray); */
+    border-right: 1px solid var(--line-gray);
 
     display: flex;
     flex-direction: column;
@@ -116,4 +117,119 @@
 
 .sidebar .menu a:hover {
     background-color: var(--light-gray);
+}
+
+.tickets {
+    height: 92vh;
+    flex-grow: 1;
+
+    border-right: 1px solid var(--line-gray);
+    padding: 2rem 0;
+
+    overflow-y: auto;
+}
+
+.tickets h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+}
+
+.ticket {
+    cursor: pointer;
+    padding: 2rem;
+
+    display: flex;
+    gap: 1rem;
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.ticket:hover {
+    background: var(--light-gray);
+    border-top: 1px solid var(--line-gray);
+    border-bottom: 1px solid var(--line-gray);
+}
+
+.ticket .code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.calendar {
+    flex-grow: 2;
+    padding: 2rem;
+
+    height: 92vh;
+    overflow: auto;
+}
+
+.month-selector {
+    cursor: pointer; /* For mocking */
+
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.month-selector i {
+    font-size: 20px;
+    color: var(--medium-gray);
+}
+
+.day-name {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.day-number {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.day-name.today,
+.day-number.today {
+    color: var(--secondary);
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 0.5rem;
+}
+
+.calendar-day {
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-top: 2px solid var(--dark-gray);
+
+    /* min-height: 180px; */
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    word-wrap: break-word;
+}
+
+.calendar-day:hover {
+    border-left: 1px dashed var(--line-gray);
+    border-right: 1px dashed var(--line-gray);
+    border-bottom: 1px dashed var(--line-gray);
+    border-top-color: var(--secondary);
+}
+
+.calendar-day.active {
+    background: var(--light-gray);
+    
+    border: none;
+    border-top: 2px solid var(--secondary);
 }

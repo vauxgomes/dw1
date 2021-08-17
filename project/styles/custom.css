@@ -94,3 +94,12 @@ hr {
 
     margin-right: 0.5rem;
 }
+
+/* Lists */
+dt {
+    font-weight: bold;
+}
+
+dd:not(:last-child) {
+    margin-bottom: 0.5rem;
+}

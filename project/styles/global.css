@@ -245,6 +245,12 @@
     padding-right: 3rem;
 }
 
+/* Spacing */
+
+.space-between-sm > *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
 /* Text */
 .text-center {
     text-align: center;
@@ -252,6 +258,14 @@
 
 .text-right {
     text-align: right;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
 }
 
 .small {

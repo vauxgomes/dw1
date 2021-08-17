@@ -1,5 +1,6 @@
 <!-- https://dribbble.com/shots/15725843-Minimal-Calendar-App -->
 <!-- https://dribbble.com/shots/7065869-Minimal-Calendar-Concept -->
+<!-- https://dribbble.com/shots/15755836-Construction-Calendar -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,34 +47,302 @@
 
             <main>
                 <div class="searchbar">
-                    <div class="search-field">
-                        <label>
+                    <div class="search-field space-between-sm">
+                        <label for="search">
                             <i class="fas fa-search"></i>
-                            <input
-                                id="search"
-                                name="search"
-                                placeholder="Procure um ticket"
-                            />
                         </label>
+
+                        <input
+                            id="search"
+                            name="search"
+                            placeholder="Procure um ticket"
+                        />
                     </div>
 
-                    <div class="notifications text-center">
-                        <div>
-                            <i class="far fa-bell"></i>
-                            <div class="red-dot"></div>
-                        </div>
-
-                        5 notificações
+                    <div class="notifications text-center space-between-sm">
+                        <i class="far fa-bell"></i>
+                        <span>5 notificações</span>
+                        <i class="fas fa-chevron-down fa-xs"></i>
                     </div>
 
                     <div class="profile text-right">Profile</div>
                 </div>
 
                 <div class="content">
-                    <div class="tickets">Tickets</div>
-                    <div class="calendar">Calendar</div>
+                    <!-- Tickets -->
+                    <div class="tickets">
+                        <h1>Tickets</h1>
+
+                        <div class="ticket">
+                            <div class="code">
+                                <i
+                                    class="fas fa-qrcode fa-3x text-secondary"
+                                ></i>
+                                <strong>11:00</strong>
+                            </div>
+
+                            <dl>
+                                <dt>Cliente</dt>
+                                <dd>Morwenna Olsson</dd>
+
+                                <dt>Serviço</dt>
+                                <dd>Agulhamento</dd>
+
+                                <dt>Horário</dt>
+                                <dd>11:00 - 11:30</dd>
+                            </dl>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="code">
+                                <i
+                                    class="fas fa-qrcode fa-3x text-secondary"
+                                ></i>
+                                <strong>11:30</strong>
+                            </div>
+
+                            <dl>
+                                <dt>Cliente</dt>
+                                <dd>Dan Parkes</dd>
+
+                                <dt>Serviço</dt>
+                                <dd>Quiropraxia</dd>
+
+                                <dt>Horário</dt>
+                                <dd>11:30 - 12:00</dd>
+                            </dl>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="code">
+                                <i
+                                    class="fas fa-qrcode fa-3x text-secondary"
+                                ></i>
+                                <strong>13:30</strong>
+                            </div>
+
+                            <dl>
+                                <dt>Cliente</dt>
+                                <dd>Mavis Donaldson</dd>
+
+                                <dt>Serviço</dt>
+                                <dd>Agulhamento</dd>
+
+                                <dt>Horário</dt>
+                                <dd>13:30 - 14:00</dd>
+                            </dl>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="code">
+                                <i
+                                    class="fas fa-qrcode fa-3x text-secondary"
+                                ></i>
+                                <strong>14:00</strong>
+                            </div>
+
+                            <dl>
+                                <dt>Cliente</dt>
+                                <dd>Mavis Donaldson</dd>
+
+                                <dt>Serviço</dt>
+                                <dd>Pedras quentes</dd>
+
+                                <dt>Horário</dt>
+                                <dd>14:00 - 14:30</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="calendar">
+                        <div class="month-selector space-between-sm">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>Agosto</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+
+                        <div class="calendar-days">
+                            <span class="day-name">DOM</span>
+                            <span class="day-name">SEG</span>
+                            <span class="day-name">TER</span>
+                            <span class="day-name today">QUA</span>
+                            <span class="day-name">QUI</span>
+                            <span class="day-name">SEX</span>
+                            <span class="day-name">SAB</span>
+
+                            <div class="calendar-day">
+                                <span class="day-number">01</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">02</span>
+                            </div>
+
+                            <div class="calendar-day today">
+                                <span class="day-number">03</span>
+
+                                <dl>
+                                    <dt>Quiropraxia</dt>
+                                    <dd>11:30 - 12:00</dd>
+                                </dl>
+                            </div>
+
+                            <div class="calendar-day active">
+                                <span class="day-number today">04</span>
+
+                                <dl>
+                                    <dt>Agulhamento</dt>
+                                    <dd>11:00 - 11:30</dd>
+
+                                    <dt>Quiropraxia</dt>
+                                    <dd>11:30 - 12:00</dd>
+                                </dl>
+
+                                <a href="#">Mais 2</a>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">05</span>
+
+                                <dl>
+                                    <dt>Liberação Miofacial</dt>
+                                    <dd>9:00 - 09:30</dd>
+
+                                    <dt>Pilates</dt>
+                                    <dd>11:00 - 12:00</dd>
+                                </dl>
+
+                                <a href="#">Mais 5</a>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">06</span>
+
+                                <dl>
+                                    <dt>Quiropraxia</dt>
+                                    <dd>9:00 - 09:30</dd>
+
+                                    <dt>Agulhamento</dt>
+                                    <dd>11:00 - 11:30</dd>
+                                </dl>
+
+                                <a href="#">Mais 1</a>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">07</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">08</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">09</span>
+
+                                <dl>
+                                    <dt>Quiropraxia</dt>
+                                    <dd>9:00 - 09:30</dd>
+
+                                    <dt>Agulhamento</dt>
+                                    <dd>11:00 - 11:30</dd>
+                                </dl>
+
+                                <a href="#">Mais 1</a>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">10</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">11</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">12</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">13</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">14</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">15</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">16</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">17</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">18</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">19</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">20</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">21</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">22</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">23</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">24</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">25</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">26</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">27</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">28</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">29</span>
+                            </div>
+
+                            <div class="calendar-day">
+                                <span class="day-number">30</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
+
+        <a href="#" class="add-ticket">
+            <i class="fas fa-plus"></i>
+        </a>
     </body>
 </html>
