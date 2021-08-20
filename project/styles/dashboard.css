@@ -5,7 +5,7 @@
 
 .logo {
     font-size: 25px;
-    /* color: var(--primary); */
+    color: var(--secondary);
 }
 
 .dashboard {
@@ -26,7 +26,6 @@
 .dashboard .content {
     flex-grow: 1;
     display: flex;
-    overflow: auto;
 }
 
 .add-ticket {
@@ -49,14 +48,17 @@
 }
 
 .searchbar {
-    padding: 1.5rem 1rem;
-    height: 8vh;
+    padding: 1rem;
+    min-height: 8vh;
 
     color: var(--medium-gray);
     background-color: var(--light-gray);
     border-bottom: 1px solid var(--line-gray);
 
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
     align-items: center;
     justify-content: space-between;
 }
@@ -80,6 +82,22 @@
 .searchbar .notifications,
 .searchbar .profile {
     flex-grow: 1;
+}
+
+.profile {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    color: var(--dark-gray);
+}
+
+.profile img {
+    object-fit: cover;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
 }
 
 .sidebar {
@@ -119,21 +137,100 @@
     background-color: var(--light-gray);
 }
 
-.tickets {
-    height: 92vh;
-    flex-grow: 1;
+.fixed-title {
+    position: fixed;
+}
 
+.calendar-container {
+    position: sticky;
+    height: 92vh;
+    padding: 2rem;
     border-right: 1px solid var(--line-gray);
+}
+
+.calendar-container h1 {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0 0 3rem 0;
+}
+
+.calendar {
+    border-spacing: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.calendar th {
+    font-size: 12px;
+    color: var(--dark-gray);
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--line-gray);
+}
+
+.calendar td {
+    cursor: pointer;
+    vertical-align: top;
+    text-align: center;
+    padding: 1rem;
+}
+
+.calendar td:hover {
+    background: var(--light-gray);
+}
+
+.calendar td.today {
+    background: var(--line-gray);
+}
+
+.calendar .today {
+    color: var(--secondary) !important;
+}
+
+.calendar .selected {
+    background: var(--line-gray) !important;
+}
+
+.calendar .day-name {
+    font-weight: bold;
+    color: var(--dark-gray);
+
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--line-gray);
+}
+
+.calendar .apppointments {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 0.2rem;
+    margin-top: 0.3rem;
+}
+
+.calendar .apppointments span {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+
+.tickets-container {
+    flex-grow: 1;
+    height: 92vh;
     padding: 2rem 0;
 
     overflow-y: auto;
 }
 
-.tickets h1 {
+.tickets-container h1 {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 1rem;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.tickets {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 }
 
 .ticket {
@@ -143,14 +240,12 @@
     display: flex;
     gap: 1rem;
 
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    border: 1px solid transparent;
 }
 
 .ticket:hover {
     background: var(--light-gray);
-    border-top: 1px solid var(--line-gray);
-    border-bottom: 1px solid var(--line-gray);
+    border: 1px solid var(--line-gray);
 }
 
 .ticket .code {
@@ -158,78 +253,4 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-}
-
-.calendar {
-    flex-grow: 2;
-    padding: 2rem;
-
-    height: 92vh;
-    overflow: auto;
-}
-
-.month-selector {
-    cursor: pointer; /* For mocking */
-
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 3rem;
-}
-
-.month-selector i {
-    font-size: 20px;
-    color: var(--medium-gray);
-}
-
-.day-name {
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
-}
-
-.day-number {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.day-name.today,
-.day-number.today {
-    color: var(--secondary);
-}
-
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, auto);
-    gap: 0.5rem;
-}
-
-.calendar-day {
-    cursor: pointer;
-
-    border: 1px solid transparent;
-    border-top: 2px solid var(--dark-gray);
-
-    /* min-height: 180px; */
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    word-wrap: break-word;
-}
-
-.calendar-day:hover {
-    border-left: 1px dashed var(--line-gray);
-    border-right: 1px dashed var(--line-gray);
-    border-bottom: 1px dashed var(--line-gray);
-    border-top-color: var(--secondary);
-}
-
-.calendar-day.active {
-    background: var(--light-gray);
-    
-    border: none;
-    border-top: 2px solid var(--secondary);
 }
