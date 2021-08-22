@@ -14,7 +14,7 @@ function marcar(evt) {
 	let cell = evt.target;
 
 	if (cell.innerText === "") {
-		cell.innerText = jogador;
+		// cell.innerText = jogador;
 		cell.classList.add(`cell-${jogador.toLowerCase()}`);
 
 		let ganhador = "";

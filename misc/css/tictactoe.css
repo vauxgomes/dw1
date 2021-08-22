@@ -1,56 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-	--cell-size: 8rem;
-	--font-size: 5rem;
+    --cell-size: 8rem;
+    --font-size: 5rem;
+    --icon-size: 4rem;
 }
 
 body {
-	background: #f1faee;
-	font-family: "Varela Round", sans-serif;
+    background: #f1faee;
+    font-family: "Varela Round", sans-serif;
 }
 
 .tictactoe {
-	margin: 3rem auto;
+    margin: 3rem auto;
 
-	display: grid;
-	justify-content: center;
-	grid-template-columns: auto auto auto;
-	gap: 0.5rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem;
 }
 
 .cell {
-	cursor: pointer;
+    cursor: pointer;
     user-select: none;
 
-	width: var(--cell-size);
-	height: var(--cell-size);
-	line-height: var(--cell-size);
+    width: var(--cell-size);
+    height: var(--cell-size);
+    line-height: var(--cell-size);
 
-	color: white;
-	text-transform: uppercase;
-	font-size: var(--font-size);
-	text-align: center;
-	text-shadow: 3px 4px 7px rgba(184, 184, 184, 0.8);
+    /* color: white;
+    text-transform: uppercase;
+    font-size: var(--font-size);
+    text-align: center;
+    text-shadow: 3px 4px 7px rgba(184, 184, 184, 0.8); */
 
-	background: #a8dadc;
-	border-radius: 0.5rem;
+    background: #a8dadc;
+    border-radius: 0.5rem;
+
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--icon-size) var(--icon-size);
 }
 
 .cell-x {
-	cursor: default;
-    content: "x";
-    background: #457B9D;
+    cursor: default;
+    background-color: #457b9d;
+    background-image: url("../img/virus.svg");
 }
 
 .cell-o {
-	cursor: default;
-    background: #E63946;
+    cursor: default;
+    background-color: #e63946;
+    background-image: url("../img/vaccine.svg");
 }
-
