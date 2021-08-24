@@ -19,6 +19,7 @@
             crossorigin="anonymous"
         />
     </head>
+
     <body>
         <div class="dashboard">
             <nav class="sidebar">
@@ -59,15 +60,55 @@
                         />
                     </div>
 
-                    <div class="notifications text-center space-between-sm">
-                        <i class="far fa-bell"></i>
-                        <span>5 notificações</span>
-                        <i class="fas fa-chevron-down fa-xs"></i>
+                    <div class="alerts dropdown">
+                        <div class="text-center space-between-sm pv-2">
+                            <i class="far fa-bell"></i>
+                            <span>4 notificações</span>
+                            <i class="fas fa-chevron-down fa-xs"></i>
+                        </div>
+
+                        <div class="dropdown-content">
+                            <a href="#" class="d-flex-center">
+                                <i class="fas fa-plus-circle"></i>
+
+                                <div>
+                                    <strong class="d-block">Novo ticket</strong>
+                                    Shiloh Garcia, 19/08/2021, 14:30
+                                </div>
+                            </a>
+
+                            <a href="#" class="d-flex-center">
+                                <i class="fas fa-plus-circle"></i>
+
+                                <div>
+                                    <strong class="d-block">Novo ticket</strong>
+                                    Saeed Mclean, 26/08/2021, 12:30
+                                </div>
+                            </a>
+
+                            <a href="#" class="d-flex-center">
+                                <i class="fas fa-minus-circle"></i>
+
+                                <div>
+                                    <strong class="d-block">Cancelamento</strong>
+                                    Alex Plant, 25/08/2021, 11:30
+                                </div>
+                            </a>
+
+                            <a href="#" class="d-flex-center">
+                                <i class="fas fa-calendar-alt"></i>
+
+                                <div>
+                                    <strong class="d-block">Remarcado</strong>
+                                    Ellie-Mae Lynch, 30/08/2021, 10:00
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="profile">
                         <img src="../img/profile.jpeg" alt="profile picture" />
-                        <a
+                        <a href="login.html"
                             >Vaux Gomes <i class="fas fa-chevron-down fa-sm"></i
                         ></a>
                     </div>
@@ -368,7 +409,7 @@
 
                                 <dl>
                                     <dt>Cliente</dt>
-                                    <dd>Mavis Donaldson</dd>
+                                    <dd>Aamir Keeling</dd>
 
                                     <dt>Serviço</dt>
                                     <dd>Agulhamento</dd>
@@ -407,8 +448,101 @@
             </main>
         </div>
 
-        <a href="#" class="add-ticket">
+        <a
+            href="#"
+            class="add-ticket"
+            data-toggle="modal"
+            data-target="#add-ticket-form"
+        >
             <i class="fas fa-plus"></i>
         </a>
+
+        <div class="modal-container" id="add-ticket-form">
+            <div class="modal">
+                <button class="btn-close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <form>
+                    <!-- Name -->
+                    <div class="form-group bg-light">
+                        <label for="name">Nome</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Nome do cliente"
+                            required
+                        />
+                    </div>
+
+                    <!-- Service -->
+                    <div class="form-group bg-light">
+                        <label for="service">Serviço</label>
+
+                        <select id="service" required>
+                            <option disabled selected value="">Serviço</option>
+                            <option>Agulhamento</option>
+                            <option>Liberação Miofacial</option>
+                            <option>Pedras Quentes</option>
+                            <option>Pilates</option>
+                            <option>Quiropraxia</option>
+                            <option>Ventosaterapia</option>
+                        </select>
+                    </div>
+
+                    <!-- Appointment -->
+                    <div class="form-group bg-light">
+                        <label for="schedule">Nome</label>
+                        <input
+                            id="schedule"
+                            name="schedule"
+                            type="datetime-local"
+                            placeholder="Nome do cliente"
+                            required
+                        />
+                    </div>
+
+                    <div class="text-right">
+                        <button
+                            type="reset"
+                            class="btn-outline btn-primary"
+                            data-dismiss="modal"
+                        >
+                            Cancelar
+                        </button>
+
+                        <button type="submit" class="btn btn-primary">
+                            Adicionar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document
+                .querySelectorAll(
+                    "*[data-toggle=modal], *[data-dismiss=modal], .modal-container .btn-close"
+                )
+                .forEach((toggler) => {
+                    toggler.addEventListener("click", () => {
+                        let target = undefined;
+
+                        if (
+                            toggler.classList.contains("btn-close") ||
+                            toggler.getAttribute("data-dismiss") != null
+                        ) {
+                            target = toggler.closest(".modal-container");
+                        } else {
+                            target = document.querySelector(
+                                toggler.getAttribute("data-target")
+                            );
+                        }
+
+                        target.classList.toggle("active");
+                    });
+                });
+        </script>
     </body>
 </html>

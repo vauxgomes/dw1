@@ -26,6 +26,7 @@
 .dashboard .content {
     flex-grow: 1;
     display: flex;
+    background-color: white;
 }
 
 .add-ticket {
@@ -79,7 +80,7 @@
 }
 
 .searchbar .search-field,
-.searchbar .notifications,
+.searchbar .alerts,
 .searchbar .profile {
     flex-grow: 1;
 }
@@ -101,7 +102,7 @@
 }
 
 .sidebar {
-    width: 8bh;
+    /* width: 8bh; */
 
     padding: 1.5rem 1rem;
     border-right: 1px solid var(--line-gray);
@@ -230,7 +231,7 @@
 
 .tickets {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .ticket {
