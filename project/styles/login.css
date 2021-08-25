@@ -1,7 +1,6 @@
-@import url("./config.css");
-@import url("./global.css");
-@import url("./reset.css");
-@import url("./custom.css");
+body {
+    background: var(--primary-dark)!important;
+}
 
 #login-container {
     max-width: 500px;

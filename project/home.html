@@ -7,11 +7,13 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- <meta http-equiv="refresh" content="3" /> -->
+        <meta http-equiv="refresh" content="3" />
 
         <title>Home Page</title>
 
+        <link rel="stylesheet" type="text/css" href="./styles/main.css" />
         <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -520,29 +522,6 @@
             </div>
         </div>
 
-        <script>
-            document
-                .querySelectorAll(
-                    "*[data-toggle=modal], *[data-dismiss=modal], .modal-container .btn-close"
-                )
-                .forEach((toggler) => {
-                    toggler.addEventListener("click", () => {
-                        let target = undefined;
-
-                        if (
-                            toggler.classList.contains("btn-close") ||
-                            toggler.getAttribute("data-dismiss") != null
-                        ) {
-                            target = toggler.closest(".modal-container");
-                        } else {
-                            target = document.querySelector(
-                                toggler.getAttribute("data-target")
-                            );
-                        }
-
-                        target.classList.toggle("active");
-                    });
-                });
-        </script>
+        <script src="./js/general.js"></script>
     </body>
 </html>

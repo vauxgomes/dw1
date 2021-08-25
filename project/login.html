@@ -9,7 +9,9 @@
 
         <title>Login Page</title>
 
+        <link rel="stylesheet" type="text/css" href="./styles/main.css" />
         <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -26,12 +28,12 @@
                 sua conta.
             </p>
 
-            <a href="#" class="btn shadow d-flex-center">
+            <a href="#" class="btn shadow d-flex-center gap-sm">
                 <img class="icon" src="./img/icons/google-g.svg" />
                 <span>Login com Google</span>
             </a>
 
-            <a href="#" class="btn shadow d-flex-center">
+            <a href="#" class="btn shadow d-flex-center gap-sm">
                 <img class="icon" src="./img/icons/facebook-f.svg" />
                 <span>Login com Facebook</span>
             </a>
@@ -40,45 +42,32 @@
 
             <form id="login-form">
                 <!-- Email -->
-                <div class="form-group form-group-flex bg-light">
-                    <!-- Icon -->
+                <div class="form-group bg-light d-flex-center">
                     <i class="icon fas fa-envelope"></i>
-
-                    <!-- Input -->
-                    <div>
-                        <label for="email">Email</label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="email@example.com"
-                            required
-                        />
-                    </div>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                    />
                 </div>
 
                 <!-- Password -->
-                <div class="form-group form-group-flex bg-light">
-                    <!-- Icon -->
-                    <i class="icon fas fa-lock"></i>
-
-                    <!-- Input -->
-                    <div>
-                        <label for="password">Senha</label>
-                        <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            placeholder="***********"
-                            required
-                        />
-                    </div>
-
+                <div class="form-group bg-light d-flex-center">
                     <i
-                        class="pointer icon fas fa-eye"
+                        class="pointer icon right-icon fas fa-eye"
                         data-target="password"
                         onclick="showPassword(this)"
                     ></i>
+                    <input
+                        class="right-icon"
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Senha"
+                        required
+                    />
                 </div>
 
                 <!-- Remember -->
